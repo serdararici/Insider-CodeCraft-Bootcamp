@@ -9,8 +9,7 @@
     --background-container: rgba(0, 0, 0, 0.775);
 }
 
-
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -112,7 +111,7 @@ a {
 
 /* Hero Section */
 #home {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -120,6 +119,7 @@ a {
     text-align: center;
     position: relative;
     padding-top: 80px;
+    overflow: hidden;
 }
 
 #home h1 {
@@ -198,24 +198,31 @@ a {
     color: white;
     font-size: 2rem;
     margin: 0 2rem;
+    text-align: center;
 }
 
 .character-grid {
     display: grid;
-    height: 40vW;
+    height: auto;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
+    gap: 90px;
     grid-auto-flow: dense;
     padding: 20px;
+    justify-items: center;
+    margin: 0px 90px;
 }
 
 .character-card {
-    height: 600px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     background-color: #f9f9f9;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;     
+    transition: transform 0.3s ease-in-out;    
+    justify-content: space-between; 
+    overflow: hidden;
 }
 
 .character-card:hover {
@@ -238,7 +245,7 @@ a {
     color: #777;
 }
 
-/*FAvorite Scene Section*/
+/*Favorite Scene Section*/
 
 #favorite-scene {
     text-align: center;
@@ -314,6 +321,7 @@ a {
     color: white;
     font-size: 2rem;
     margin: 0 2rem;
+    text-align: center;
 }
 
 .episode-cards {
@@ -321,6 +329,30 @@ a {
     grid-template-columns: repeat(auto-fill, minmax(1fr, 1fr));
     gap: 20px;
     padding: 20px;
+}
+
+/* Add to Favorites Button */
+.fav-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 8px 16px;
+    background-color: var(--secondary-color);
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 1; 
+}
+
+.fav-btn:hover {
+    background-color: #016e19; 
+}
+
+.fav-btn.active {
+    background-color: #a51221;
 }
 
 .episode-card {
@@ -333,6 +365,7 @@ a {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
+    position: relative;
 }
 
 .episode-card img {
@@ -384,6 +417,10 @@ footer {
     color: var(--secondary-color);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* Media Queries for Responsiveness */
 @media screen and (max-width: 768px) {
     .navbar .hamburger {
@@ -411,39 +448,72 @@ footer {
         color: #fff;
         font-size: 1.2rem;
     }
-
-    .hero img {
-        width: 80%;
-        margin-bottom: 20px;
-    }
-
     .hero-content {
-        flex-direction: column;
-        gap: 2rem;
+        flex-direction: column; /* İçeriği dikey hizala */
+        text-align: center;
+        gap: 20px;
+        padding: 1.5rem;
     }
 
     .poster-container {
         flex: 0 0 auto;
-        width: 80%;
-        max-width: 300px;
+        width: 80%; /* Resmi küçült, tam genişlik almasın */
+        max-width: 350px; /* Maksimum genişlik */
     }
 
-    #home {
-        padding-top: 450px;
+    .plot {
+        font-size: 1rem;
+        max-width: 90%; /* Küçük ekranlarda daha iyi okunabilirlik */
     }
     #home h1 {
-        font-size: 2rem;
+        font-size: 3rem; /* Küçük ekranlarda başlığı küçült */
+    }
+
+    #characters {
+        margin: 0 20px;
+        padding: 30px 10px;
+    }
+
+    #characters h2 {
+        font-size: 1.8rem;
+        margin: 0 20px;
+        padding: 30px 10px;
+    }
+
+    .character-grid {
+        grid-template-columns: 1fr 1fr;
+        margin: 0px 0px;
+    }
+
+    .character-card img {
+        height: 250px;
+    }
+
+    .character-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .character-card p {
+        font-size: 0.9rem;
     }
 
     .episode-card {
-        flex-direction: column; /* Kartı dikey hizala */
-        text-align: center; /* Metni ortala */
+        flex-direction: column; 
+        text-align: center; 
     }
 
     .episode-card img {
-        width: 100%; /* Mobilde tam genişlik */
-        max-width: 400px; /* Maksimum genişlik */
+        width: 100%; 
+        max-width: 400px;
         height: auto;
+    }
+
+    .fav-btn {
+        position: relative; 
+        margin: 10px;
+        margin-left: 25px;
+        width: 100%; 
+        font-size: 1.2rem; 
     }
 
 }
