@@ -1,0 +1,26 @@
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        flex-direction: column;
+        background-color: var(--primary-color);
+        align-items: center;
+        padding: 2rem;
+        transition: var(--transition);
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .character-grid {
+        grid-template-columns: 1fr;
+    }
+} 
