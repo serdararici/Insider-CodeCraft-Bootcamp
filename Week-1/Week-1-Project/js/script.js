@@ -1,18 +1,5 @@
 
 
-// Smooth scrolling for navigation links
-document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            document.querySelector(targetId).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-    });
-});
-
 // Mobile menu toggle
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
@@ -30,7 +17,6 @@ menuItems.forEach(item => {
     });
 });
 
-const lottieContainer = document.getElementById('lottie-animation');
 const favBtns = document.querySelectorAll('.fav-btn');
 
 favBtns.forEach(button => {
