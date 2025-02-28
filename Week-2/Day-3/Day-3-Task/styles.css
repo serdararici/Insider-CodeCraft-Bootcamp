@@ -1,0 +1,154 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #e6e9f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    flex-direction: column;
+}
+
+.container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 450px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 4rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+#timeInput {
+    width: 100%;
+    padding: 15px;
+    margin-top: 10px;
+    font-size: 1.2rem;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#timeInput:focus {
+    border-color: #6c63ff;
+}
+
+.btn-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+button {
+    font-size: 1.2rem;  
+    padding: 15px 25px;  
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 120px; 
+    font-weight: 600;
+}
+
+
+#startBtn {
+    background-color: #0c882d;
+    color: white;
+}
+
+#startBtn:hover {
+    background-color: #16641d;
+    transform: scale(1.05);
+}
+
+
+#pauseBtn {
+    background-color: #42a5f5;
+    color: white;
+}
+
+#pauseBtn:hover {
+    background-color: #286495;
+    transform: scale(1.05);
+}
+
+
+#resetBtn {
+    background-color: #c21515;
+    color: white;
+}
+
+#resetBtn:hover {
+    background-color: #93101b;
+    transform: scale(1.05);
+}
+
+
+#countdown {
+    font-size: 3rem;  
+    color: #333;
+    margin-top: 25px;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    #timeInput {
+        width: 80%;
+    }
+
+    button {
+        font-size: 1.1rem;
+        padding: 12px 20px;
+    }
+
+    #countdown {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 20px;
+    }
+
+    #timeInput {
+        width: 100%;
+    }
+
+    .btn-container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+    }
+
+    #countdown {
+        font-size: 2.5rem;
+    }
+}
