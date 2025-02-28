@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Longest Collatz Sequence</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Longest Collatz Sequence</h1>
+    
+    <p>This page calculates the starting number under one million that produces the longest Collatz sequence and the number of steps required to reach 1.</p>
+    
+    <h2>What is the Collatz Sequence?</h2>
+    <p>The Collatz sequence is a mathematical sequence that starts with any positive integer and follows these rules:</p>
+    <ul>
+        <li>If the number is even, divide it by 2.</li>
+        <li>If the number is odd, multiply it by 3 and add 1.</li>
+        <li>Repeat the process until the number reaches 1.</li>
+    </ul>
+    <p>The length of the sequence varies depending on the starting number.</p>
+    
+    <button onclick="calculateCollatz()">Calculate the Longest Collatz Sequence Under One Million</button>
+    
+    <p id="result"></p>
+    
+    <script src="script.js"></script>
+</body>
+
+</html>
