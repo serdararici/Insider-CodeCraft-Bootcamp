@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Görev Yönetim Uygulaması</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="task-container">
+        <h1>Görev Listesi</h1>
+        
+        <form id="task-form">
+            <label for="title">Başlık:</label>
+            <input type="text" id="title" required>
+            
+            <label for="description">Açıklama:</label>
+            <textarea id="description"></textarea>
+            
+            <label for="priority">Öncelik:</label>
+            <input type="radio" name="priority" value="Low"> Düşük
+            <input type="radio" name="priority" value="Medium"> Orta
+            <input type="radio" name="priority" value="High"> Yüksek
+
+            <button type="submit">Ekle</button>
+        </form>
+
+        <div id="task-list"></div>
+
+        <button id="filter-completed">Sadece Tamamlananları Göster</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
