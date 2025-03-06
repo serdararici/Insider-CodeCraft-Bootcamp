@@ -1,0 +1,102 @@
+[
+    {
+        "name": "iPhone 15",
+        "price": "45,000 TL",
+        "link": "https://www.apple.com/tr/iphone-15/"
+    },
+    {
+        "name": "Samsung Galaxy S23",
+        "price": "40,000 TL",
+        "link": "https://www.samsung.com/tr/smartphones/galaxy-s23/buy/"
+    },
+    {
+        "name": "Google Pixel 7",
+        "price": "35,000 TL",
+        "link": "https://store.google.com/product/pixel_7"
+    },
+    {
+        "name": "Xiaomi 13 Pro",
+        "price": "30,000 TL",
+        "link": "https://www.mi.com/tr/product/xiaomi-13-pro/"
+    },
+    {
+        "name": "OnePlus 11",
+        "price": "32,500 TL",
+        "link": "https://www.oneplus.com/11"
+    },
+    {
+        "name": "Sony Xperia 1 V",
+        "price": "38,000 TL",
+        "link": "https://www.sony.com/xperia-1-v"
+    },
+    {
+        "name": "Oppo Find X6 Pro",
+        "price": "34,000 TL",
+        "link": "https://www.oppo.com/find-x6-pro/"
+    },
+    {
+        "name": "Huawei P60 Pro",
+        "price": "36,500 TL",
+        "link": "https://consumer.huawei.com/p60-pro/"
+    },
+    {
+        "name": "Asus ROG Phone 7",
+        "price": "37,000 TL",
+        "link": "https://rog.asus.com/rog-phone-7/"
+    },
+    {
+        "name": "Nothing Phone (2)",
+        "price": "28,500 TL",
+        "link": "https://www.nothing.tech/phone-2"
+    },
+    {
+        "name": "iPhone 15 Pro",
+        "price": "55,000 TL",
+        "link": "https://www.apple.com/tr/iphone-15-pro/"
+    },
+    {
+        "name": "Samsung Galaxy S23 Ultra",
+        "price": "50,000 TL",
+        "link": "https://www.samsung.com/tr/smartphones/galaxy-s23-ultra/"
+    },
+    {
+        "name": "Google Pixel 7 Pro",
+        "price": "39,000 TL",
+        "link": "https://store.google.com/product/pixel_7_pro"
+    },
+    {
+        "name": "Xiaomi 13 Ultra",
+        "price": "42,000 TL",
+        "link": "https://www.mi.com/global/13-ultra/"
+    },
+    {
+        "name": "OnePlus 11R",
+        "price": "29,000 TL",
+        "link": "https://www.oneplus.com/11r"
+    },
+    {
+        "name": "Sony Xperia 5 V",
+        "price": "34,500 TL",
+        "link": "https://www.sony.com/xperia-5-v"
+    },
+    {
+        "name": "Oppo Reno 10 Pro+",
+        "price": "31,000 TL",
+        "link": "https://www.oppo.com/reno10-pro-plus/"
+    },
+    {
+        "name": "Huawei Mate 50 Pro",
+        "price": "43,000 TL",
+        "link": "https://consumer.huawei.com/mate-50-pro/"
+    },
+    {
+        "name": "Asus Zenfone 10",
+        "price": "33,000 TL",
+        "link": "https://www.asus.com/zenfone-10/"
+    },
+    {
+        "name": "Realme GT 3",
+        "price": "27,500 TL",
+        "link": "https://www.realme.com/gt-3"
+    }
+]

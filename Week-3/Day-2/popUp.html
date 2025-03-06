@@ -1,0 +1,87 @@
+<script>
+    $(document).ready(function() {
+
+        const init = () => {
+            buildHtml();
+            buildCss();
+            setEvents();
+        };
+
+        const buildHtml = () => {
+            const popUpHtml = `
+            <button id="showPopup">Open Popup</button>
+                <div id="popup">
+                    <h2>Jquery popup</h2>
+                    <button id="close">Close Popup</button>
+                    <button id="empty">Clear Content</button>
+                    <button id="remove">Remove Popup</button>
+            </div>`
+            
+            
+            $('.highlight').prepend(popUpHtml);
+        }
+        
+        const buildCss = () => {
+            $('<style>').html(`
+            #showPopup {
+                width: 100%;
+                height: 50px;
+                border: none;
+                border-radius: 10px;
+                cursor: pointer;
+                font-size: 16px;
+            }
+            #popup {
+                display: none;
+                position: fixed;
+                background: #fff;
+                padding: 20px;
+                flex-direction: column;
+                width: 50%;
+                border: 7px solid #d5d5d5;
+                gap: 10px;
+                left: 20%;
+                min-height: 200px
+            
+            }
+            .active{
+                display: flex !important;
+            }
+            #popup button {
+                width: 100%;
+                height: 50px;
+                border: none;
+                border-radius: 10px;
+                cursor: pointer;
+                font-size: 16px;
+            }
+        `).addClass('my-custom-style').appendTo('head');
+        }
+
+        const setEvents = () => {
+            $('#showPopup').on('click', function() {
+                $('#popup').toggleClass('active');
+            });
+
+            $('#empty').on('click', function() {
+                $('#popup').empty();
+            });
+
+            $('#remove').on('click', function() {
+                $('#popup').remove();
+            });
+
+            $('#close').on('click', function() {
+                $('#popup').removeClass('active');
+            });
+
+            $(window).on('scroll', function() {
+                if($(window).scrollTop() + $(window).height() == $(document).height()) {
+                    $('#popup').addClass('active');
+                }
+            });
+        };
+
+        init();
+    });
+</script>

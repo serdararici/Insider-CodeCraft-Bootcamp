@@ -1,0 +1,120 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f9;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Buton */
+button {
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(45deg, #007bff, #0056b3);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background: linear-gradient(45deg, #0056b3, #003d80);
+    transform: scale(1.05);
+}
+
+/* Ürün Listeleme */
+#productContainer {
+    margin-top: 20px;
+}
+
+.product-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.product-item:hover {
+    transform: scale(1.03);
+}
+
+.product-item h2 {
+    font-size: 18px;
+    color: #333;
+    margin: 0;
+    width: 60%;
+}
+
+.product-item p {
+    font-size: 16px;
+    color: #555;
+    margin: 0;
+    width: 20%;
+    font-weight: bold;
+}
+
+.product-item a {
+    background: #007bff;
+    color: white;
+    padding: 8px 12px;
+    font-size: 14px;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.product-item a:hover {
+    background: #0056b3;
+    transform: scale(1.1);
+}
+
+/* Yükleniyor Mesajı */
+#statusMessage {
+    font-size: 18px;
+    font-weight: bold;
+    color: #d9534f;
+    margin-top: 15px;
+}
+
+/* Mobil Uyum */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    .product-item h2 {
+        font-size: 16px;
+    }
+
+    .product-item p {
+        font-size: 14px;
+    }
+}
