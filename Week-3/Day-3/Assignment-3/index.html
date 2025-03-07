@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <!-- jQuery Validate Plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.21.0/jquery.validate.min.js" integrity="sha512-KFHXdr2oObHKI9w4Hv1XPKc898mE4kgYx58oqsc/JqqdLMDI4YjOLzom+EMlW8HFUd0QfjfAvxSL6sEq/a42fQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- jQuery Masked Input Plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+
+    <!-- jQuery UI for Datepicker -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+</head>
+<body>
+    
+    <!-- Apply Now Button -->
+    <button id="applyBtn">Apply Now</button>
+    
+    <!-- Job Application Form (Initially Hidden) -->
+    <div id="applicationForm" class="form-container" style="display: none;">
+        <h2>Job Application</h2>
+        <button id="closeBtn">X</button>
+        <form id="jobForm">
+            
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required>
+            
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" name="phone" placeholder="(05xx) xxx-xx-xx" required>
+            
+            <label for="position">Position Applied:</label>
+            <select id="position" name="position" required>
+                <option value="">Select a position</option>
+                <option value="developer">Software Developer</option>
+                <option value="mobile-developer">Mobile Developer</option>
+                <option value="designer">UI/UX Designer</option>
+                <option value="manager">Project Manager</option>
+            </select>
+            
+            <!-- Optional Date Picker for Available Start Date -->
+            <label for="startDate">Available Start Date:</label>
+            <input type="text" id="startDate" name="startDate">
+            
+            <button type="submit">Submit</button>
+        </form>
+        
+        <!-- Success Message (Hidden Initially) -->
+        <div id="successMessage" style="display: none;">Application Submitted Successfully!</div>
+    </div>
+    
+    <script src="script.js"></script> <!-- External JavaScript -->
+</body>
+</html>
