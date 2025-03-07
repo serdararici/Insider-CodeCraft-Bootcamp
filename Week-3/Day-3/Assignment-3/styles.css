@@ -1,4 +1,3 @@
-/* General Reset */
 * {
     margin: 0;
     padding: 0;
@@ -6,23 +5,61 @@
     font-family: Arial, sans-serif;
 }
 
-/* Body Styling */
 body {
     background-color: #f4f4f9;
     display: flex;
-    justify-content: center;
-    align-items: center;
     min-height: 100vh;
     flex-direction: column;
 }
 
-/* Apply Now Button */
+.navbar {
+    background-color: #222;
+    color: #fff; 
+    padding: 15px 30px; 
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    border-bottom: 3px solid #007BFF; 
+}
+
+.navbar h1 {
+    font-size: 24px;
+    font-weight: bold; 
+    letter-spacing: 2px; 
+    margin: 0;
+}
+
+.navbar ul {
+    list-style: none; 
+    margin: 0;
+    padding: 0;
+    display: flex; 
+}
+
+.navbar ul li {
+    margin: 0 15px; 
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none; 
+    font-size: 16px; 
+    font-weight: bold; 
+    letter-spacing: 1px; 
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #007BFF; 
+}
+
 #applyBtn {
     background-color: #007BFF;
     color: white;
     border: none;
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 22px;
+    border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease;
     display: inline-block;
@@ -33,8 +70,14 @@ body {
     background-color: #0056b3;
 }
 
+.main-content {
+    flex: 1;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-/* Form Container */
 .form-container {
     background-color: white;
     padding: 20px;
@@ -46,7 +89,6 @@ body {
     transition: opacity 0.5s ease;
 }
 
-/* Close Button */
 #closeBtn {
     position: absolute;
     top: 10px;
@@ -62,13 +104,11 @@ body {
     color: #444;
 }
 
-/* Form Heading */
 h2 {
     text-align: center;
     margin-bottom: 20px;
 }
 
-/* Form Labels and Inputs */
 label {
     display: block;
     margin-bottom: 5px;
@@ -93,7 +133,6 @@ input:focus, select:focus {
     outline: none;
 }
 
-/* Submit Button */
 button[type="submit"] {
     background-color: #28a745;
     color: white;
@@ -127,13 +166,95 @@ button[type="submit"]:hover {
     margin-bottom: 10px;
 }
 
+.error {
+    color: #d9534f; 
+    font-size: 14px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    border-color: #d9534f;
+}
+
+.input-error {
+    border-color: #d9534f;
+}
+
+
+.success {
+    color: #5bc0de; 
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.footer {
+    background-color: #222; 
+    color: #fff; 
+    text-align: center; 
+    padding: 20px 0; 
+    font-size: 16px; 
+    border-top: 3px solid #007BFF; 
+    font-weight: bold; 
+}
+
+.footer p {
+    margin: 0;
+    letter-spacing: 1px;
+}
+
 /* Responsive Design */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .navbar h1 {
+        font-size: 22px;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        margin-top: 15px;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+    }
+
+    .navbar ul li a {
+        font-size: 18px;
+    }
+
     .form-container {
-        width: 90%;
+        width: 80%;
+        margin: 40px 0px; 
     }
 
     #applyBtn {
-        width: 100%;
+        width: 40%;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar h1 {
+        font-size: 20px;
+    }
+
+    .navbar ul li a {
+        font-size: 16px;
+    }
+
+    .form-container {
+        padding: 15px; 
+    }
+
+    button[type="submit"] {
+        font-size: 14px;
+    }
+
+    #applyBtn {
+        width: 40%;
     }
 }

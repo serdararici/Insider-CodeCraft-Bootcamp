@@ -20,47 +20,60 @@
 </head>
 <body>
     
-    <!-- Apply Now Button -->
-    <button id="applyBtn">Apply Now</button>
+    <nav class="navbar">
+        <h1>Insider</h1>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Jobs</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
     
-    <!-- Job Application Form (Initially Hidden) -->
-    <div id="applicationForm" class="form-container" style="display: none;">
-        <h2>Job Application</h2>
-        <button id="closeBtn">X</button>
-        <form id="jobForm">
-            
-            <label for="firstName">First Name:</label>
-            <input type="text" id="firstName" name="firstName" required>
-            
-            <label for="lastName">Last Name:</label>
-            <input type="text" id="lastName" name="lastName" required>
-            
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="phone">Phone Number:</label>
-            <input type="text" id="phone" name="phone" placeholder="(05xx) xxx-xx-xx" required>
-            
-            <label for="position">Position Applied:</label>
-            <select id="position" name="position" required>
-                <option value="">Select a position</option>
-                <option value="developer">Software Developer</option>
-                <option value="mobile-developer">Mobile Developer</option>
-                <option value="designer">UI/UX Designer</option>
-                <option value="manager">Project Manager</option>
-            </select>
-            
-            <!-- Optional Date Picker for Available Start Date -->
-            <label for="startDate">Available Start Date:</label>
-            <input type="text" id="startDate" name="startDate">
-            
-            <button type="submit">Submit</button>
-        </form>
-        
-        <!-- Success Message (Hidden Initially) -->
+    <section class="main-content">
+        <button id="applyBtn">Apply Now</button>
+    
+        <!-- Job Application Form (Initially Hidden) -->
+        <div id="applicationForm" class="form-container" style="display: none;">
+            <h2>Job Application</h2>
+            <button id="closeBtn">X</button>
+            <form id="jobForm">
+                
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" required>
+                
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" name="phone" placeholder="(05xx) xxx-xx-xx" required>
+                
+                <label for="position">Position Applied:</label>
+                <select id="position" name="position" required>
+                    <option value="">Select a position</option>
+                    <option value="developer">Software Developer</option>
+                    <option value="mobile-developer">Mobile Developer</option>
+                    <option value="designer">UI/UX Designer</option>
+                    <option value="manager">Project Manager</option>
+                </select>
+
+                <label for="startDate">Available Start Date:</label>
+                <input type="text" id="startDate" name="startDate" placeholder="dd/mm/yyyy (Optional)">
+                
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
         <div id="successMessage" style="display: none;">Application Submitted Successfully!</div>
-    </div>
+    </section>
     
-    <script src="script.js"></script> <!-- External JavaScript -->
+    <footer class="footer">
+        <p>This page is created by Serdar Arıcı &copy; 2025.</p>
+    </footer>
+    
+    <script src="script.js"></script> 
 </body>
 </html>

@@ -1,26 +1,22 @@
 $(document).ready(function() {
-    // Başvuru Yap butonuna tıklandığında formu göster
     $('#applyBtn').click(function() {
-        $('#applicationForm').fadeIn();
-        $(this).hide();
+        $('#applicationForm').slideDown(500);
+        $(this).fadeOut();
     });
 
-    // Kapatma butonuna tıklandığında formu gizle
     $('#closeBtn').click(function() {
-        $('#applicationForm').fadeOut();
-        $('#applyBtn').show();
+        $('#applicationForm').slideUp(500, function() {
+            $('#applyBtn').fadeIn();
+        });
+        $('#jobForm')[0].reset();
     });
+    $('#phone').mask('(9999) 999-99-99');
 
-    // Telefon numarasına maske ekleyelim
-    $('#phone').mask('(9999) 999-99-99');  // Amerikan formatında telefon numarası
-
-    // Tarih seçici (datepicker) ekleyelim
     $('#startDate').datepicker({
-        dateFormat: 'yy-mm-dd',
-        minDate: 0 // Bugünden önceki tarihler seçilemesin
+        dateFormat: 'dd/mm/yy',
+        minDate: 0
     });
 
-    // Formu doğrulama işlemi
     $('#jobForm').validate({
         rules: {
             firstName: {
@@ -36,8 +32,7 @@ $(document).ready(function() {
                 email: true
             },
             phone: {
-                required: true,
-                phoneTR: true  // Masked input ile daha fazla doğrulama yapar
+                required: true
             },
             position: {
                 required: true
@@ -57,17 +52,28 @@ $(document).ready(function() {
                 email: "Please enter a valid email address"
             },
             phone: {
-                required: "Phone number is required",
-                phoneUS: "Please enter a valid phone number"
+                required: "Phone number is required"
             },
             position: {
                 required: "Please select a position"
             }
         },
+        errorPlacement: function(error, element) {
+            error.addClass('error');
+            error.insertAfter(element); 
+        },
+        highlight: function(element) {
+            $(element).addClass('input-error'); 
+        },
+        unhighlight: function(element) {
+            $(element).removeClass('input-error'); 
+        },
         submitHandler: function(form) {
-            // Başarı mesajını göster
-            $('#successMessage').fadeIn().delay(3000).fadeOut(); // 3 saniye sonra kaybolacak
-            // Formu gönder (gerçekten bir sunucuya göndermek isterseniz burada ajax kullanabilirsiniz)
+            $('#applicationForm').slideUp(500, function() {
+                $('#applyBtn').fadeIn(1000);
+            });
+
+            $('#successMessage').hide().text('Application Submitted Successfully!').fadeIn().delay(3000).fadeOut(1000);
             form.reset();
         }
     });
