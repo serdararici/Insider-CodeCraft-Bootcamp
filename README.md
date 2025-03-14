@@ -98,41 +98,41 @@ In this repository, you will find the projects I have worked on during the bootc
 
 ### Week 1 Projects  
 1. **Assignment 1:** Registration Page 
-   ![Registration Page](https://github.com/serdararici/Insider-CodeCraft-Bootcamp/blob/main/Images/Week1_Assignment1.JPG)
+   ![Registration Page](https://github.com/serdararici/Insider-CodeCraft-Bootcamp/blob/main/Images/Week-1/Week1_Assignment1.JPG)
 
-2. **Assignment 2:** Credit Card UI  
-   ![Credit Card UI](https://github.com/serdararici/Insider-CodeCraft-Bootcamp/blob/main/Images/Week1_Assignment2.JPG)
+3. **Assignment 2:** Credit Card UI  
+   ![Credit Card UI](https://github.com/serdararici/Insider-CodeCraft-Bootcamp/blob/main/Images/Week-1/Week1_Assignment2.JPG)
      
-3. **Assignment 3:** Product Cards UI  
-   ![Product Cards UI](https://github.com/serdararici/Insider-CodeCraft-Bootcamp/blob/main/Images/Week1_Assignment3.JPG)
+4. **Assignment 3:** Product Cards UI  
+   ![Product Cards UI](https://github.com/serdararici/Insider-CodeCraft-Bootcamp/blob/main/Images/Week-1/Week1_Assignment3.JPG)
 
-4. **Project 1:** Favorite Series Web Page  
-   ![Favorite Series Web Page](https://github.com/serdararici/Insider-CodeCraft-Bootcamp/blob/main/Images/Week1_Project1.JPG)
+5. **Project 1:** Favorite Series Web Page  
+   ![Favorite Series Web Page](https://github.com/serdararici/Insider-CodeCraft-Bootcamp/blob/main/Images/Week-1/Week1_Project1.JPG)
 
 ### Week 2 Projects  
 1. **Assignment 1:** User Input & Shopping Cart Simulation 
-   ![User Input & Shopping Cart Simulation](https://github.com/serdararici/Insider-CodeCraft-Bootcamp/blob/main/Images/Week2_Assignment1.JPG)
+   ![User Input & Shopping Cart Simulation](https://github.com/serdararici/Insider-CodeCraft-Bootcamp/blob/main/Images/Week-2/Week2_Assignment1.JPG)
 
 2. **Assignment 2:** Longest Collatz Sequence    
-   ![Longest Collatz Sequence](https://github.com/serdararici/Insider-CodeCraft-Bootcamp/blob/main/Images/Week2_Assignment2.JPG)
+   ![Longest Collatz Sequence](https://github.com/serdararici/Insider-CodeCraft-Bootcamp/blob/main/Images/Week-2/Week2_Assignment2.JPG)
      
 3. **Assignment 3:** Countdown Timer  
-   ![Countdown Timer](https://github.com/serdararici/Insider-CodeCraft-Bootcamp/blob/main/Images/Week2_Assignment3.JPG)
+   ![Countdown Timer](https://github.com/serdararici/Insider-CodeCraft-Bootcamp/blob/main/Images/Week-2/Week2_Assignment3.JPG)
 
 4. **Project 1:** Real-Time Task Management App  
-   ![Real-Time Task Management App](https://github.com/serdararici/Insider-CodeCraft-Bootcamp/blob/main/Images/Week2_Project1.JPG)
+   ![Real-Time Task Management App](https://github.com/serdararici/Insider-CodeCraft-Bootcamp/blob/main/Images/Week-2/Week2_Project1.JPG)
 
 ### Week 3 Projects  
 1. **Assignment 1:** To-Do List with jQuery
-   ![To-Do List with jQuery](https://github.com/serdararici/Insider-CodeCraft-Bootcamp/blob/main/Images/Week3_Assignment1.JPG)
+   ![To-Do List with jQuery](https://github.com/serdararici/Insider-CodeCraft-Bootcamp/blob/main/Images/Week-3/Week3_Assignment1.JPG)
 
 2. **Assignment 2:** Fetching and Displaying Products Using AJAX  
-   ![Fetching and Displaying Products Using AJAX](https://github.com/serdararici/Insider-CodeCraft-Bootcamp/blob/main/Images/Week3_Assignment2.JPG)
+   ![Fetching and Displaying Products Using AJAX](https://github.com/serdararici/Insider-CodeCraft-Bootcamp/blob/main/Images/Week-3/Week3_Assignment2.JPG)
      
 3. **Assignment 3:** Job Application Form with Animations and Validation  
-   ![Job Application Form with Animations and Validation](https://github.com/serdararici/Insider-CodeCraft-Bootcamp/blob/main/Images/Week-3_Assignment-3/Week-3_Assignment-3_img-3.JPG)
+   ![Job Application Form with Animations and Validation](https://github.com/serdararici/Insider-CodeCraft-Bootcamp/blob/main/Images/Week-3/Week-3_Assignment-3/Week-3_Assignment-3_img-3.JPG)
 
 4. **Project 1:** Interactive Product Listing with Pop-up Details  
-   ![Interactive Product Listing with Pop-up Detail](https://github.com/serdararici/Insider-CodeCraft-Bootcamp/blob/main/Images/Yeni%20klas%C3%B6r/Week-3_Assignment-4_2.JPG)
+   ![Interactive Product Listing with Pop-up Detail](https://github.com/serdararici/Insider-CodeCraft-Bootcamp/blob/main/Images/Week-3/Week-3_Assignment-4/Week-3_Assignment-4_2.JPG)
    
 Feel free to explore the projects and assignments here. This repository serves as a showcase of my learning journey through the Insider CodeCraft Bootcamp.
