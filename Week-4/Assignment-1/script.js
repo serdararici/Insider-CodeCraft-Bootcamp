@@ -1,137 +1,123 @@
-class UserList {
-    constructor() {
-        this.container = document.querySelector('.ins-api-users');
-        this.init();
-        this.addStyles();
-    }
+const API_URL = "https://jsonplaceholder.typicode.com/users";
 
-    addStyles() {
-        const styles = document.createElement('style');
-        styles.textContent = `
-            .ins-api-users {
-                max-width: 1000px;
-                margin: 20px auto;
-                font-family: Arial, sans-serif;
-            }
-            .user-table {
-                width: 100%;
-                border-collapse: collapse;
-                margin-top: 20px;
-            }
-            .user-table th, .user-table td {
-                border: 1px solid #ddd;
-                padding: 12px;
-                text-align: left;
-            }
-            .user-table th {
-                background-color: #f4f4f4;
-            }
-            .delete-btn {
-                background-color: #ff4444;
-                color: white;
-                border: none;
-                padding: 5px 10px;
-                cursor: pointer;
-                border-radius: 3px;
-            }
-            .error-message {
-                background-color: #ffebee;
-                color: #c62828;
-                padding: 10px;
-                margin: 10px 0;
-                border-radius: 4px;
-            }
-        `;
-        document.head.appendChild(styles);
-    }
+const usersList = document.querySelector(".user-list");
+const errorMessage = document.getElementById("error-message");
 
-    async init() {
-        try {
-            const users = await this.getUsers();
-            if (users) {
-                this.renderUsers(users);
-            }
-        } catch (error) {
-            this.showError('Kullanıcı verileri yüklenirken bir hata oluştu.');
+const fetchUsers = () => {
+    return new Promise((resolve, reject) => {
+        fetch(API_URL)
+        .then(response => {
+            if(!response.ok) {
+                throw new Error(`HTTP Error! Status Code: ${response.status}`)
+            } 
+            return response.json();
+        })
+        .then(data => {
+            const storedData = {
+                users: data,
+                timeStamp: Date.now()
+            };
+            localStorage.setItem("usersData", JSON.stringify(storedData));
+            resolve(data);
+        })
+        .catch(error => {
+            errorMessage.textContent = "Error loading user data!";
+            errorMessage.style.display = "block";
+            reject(error);
+        });
+    });
+};
+
+const getUsers = () => {
+    const oneDay = 24 * 60 * 60 *1000;
+    const storedData = localStorage.getItem("usersData");
+
+    if(storedData) {
+        const parsedData = JSON.parse(storedData);
+        if(Date.now() - parsedData.timeStamp < oneDay) {
+            console.log("Datas came from localStorage");
+            return Promise.resolve(parsedData.users);
         }
     }
 
-    async getUsers() {
-        // localStorage kontrolü
-        const stored = localStorage.getItem('users');
-        const timestamp = localStorage.getItem('usersTimestamp');
-        const now = new Date().getTime();
-        const oneDay = 24 * 60 * 60 * 1000;
+    console.log("Data fetching from API...")
+    return fetchUsers();
+};
 
-        if (stored && timestamp && (now - Number(timestamp)) < oneDay) {
-            return JSON.parse(stored);
-        }
+const addUsersToList = (users) => {
+    usersList.innerHTML = "";
 
-        try {
-            const response = await fetch('https://jsonplaceholder.typicode.com/users');
-            if (!response.ok) throw new Error('API yanıt vermedi');
-            
-            const users = await response.json();
-            
-            // localStorage'a kaydet
-            localStorage.setItem('users', JSON.stringify(users));
-            localStorage.setItem('usersTimestamp', now.toString());
-            
-            return users;
-        } catch (error) {
-            this.showError('API\'den veri çekilemedi.');
-            return null;
-        }
-    }
+    const userTable = document.createElement('table');
+    userTable.classList.add("user-table");
 
-    showError(message) {
-        const errorDiv = document.createElement('div');
-        errorDiv.className = 'error-message';
-        errorDiv.textContent = message;
-        this.container.appendChild(errorDiv);
-    }
 
-    deleteUser(userId) {
-        const users = JSON.parse(localStorage.getItem('users'));
-        const updatedUsers = users.filter(user => user.id !== userId);
-        localStorage.setItem('users', JSON.stringify(updatedUsers));
-        this.renderUsers(updatedUsers);
-    }
-
-    renderUsers(users) {
-        this.container.innerHTML = '';
-        
-        const table = document.createElement('table');
-        table.className = 'user-table';
-        
-        table.innerHTML = `
-            <thead>
+    userTable.innerHTML = `
+        <thead>
+            <tr>
+                <th>User Name</th>
+                <th>E-mail</th>
+                <th>Adress</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            ${users.map(user => `
                 <tr>
-                    <th>Kullanıcı Adı</th>
-                    <th>E-posta</th>
-                    <th>Adres</th>
-                    <th>İşlemler</th>
+                    <td>${user.username}</td>
+                    <td>${user.email}</td>
+                    <td>${user.address.street}, ${user.address.city}</td>
+                    <td class="action-td">
+                        <button class="delete-btn" data-id="${user.id}">
+                            Delete
+                        </button>
+                    </td>
                 </tr>
-            </thead>
-            <tbody>
-                ${users.map(user => `
-                    <tr>
-                        <td>${user.username}</td>
-                        <td>${user.email}</td>
-                        <td>${user.address.street}, ${user.address.city}</td>
-                        <td>
-                            <button class="delete-btn" onclick="userList.deleteUser(${user.id})">
-                                Sil
-                            </button>
-                        </td>
-                    </tr>
-                `).join('')}
-            </tbody>
-        `;
-        
-        this.container.appendChild(table);
-    }
+            `).join('')}
+        </tbody>
+    `;
+
+    usersList.appendChild(userTable);
+
+    document.querySelectorAll(".delete-btn").forEach(button => {
+        button.addEventListener("click", (event) => {
+            event.stopPropagation();
+            const userId = parseInt(event.target.getAttribute("data-id"));
+            deleteUser(userId);
+        });
+    });
 }
 
-// Uygulamayı başlat
-const userList = new UserList(); 
+const deleteUser = (id) => {
+    const storedData = localStorage.getItem("usersData");
+
+    if(storedData) {
+        let parseData = JSON.parse(storedData);
+        parseData.users = parseData.users.filter(user => user.id !== id);
+        localStorage.setItem("usersData", JSON.stringify(parseData));
+        console.log(`User ID: ${id} deleted!`);
+        getUsers().then(addUsersToList);
+    }
+};
+
+
+getUsers()
+    .then(addUsersToList)
+    .catch(error => console.log("Error:", error));
+
+
+
+    /*Hamburger menu*/
+    const hamburger = document.querySelector(".hamburger");
+    const navLinks = document.querySelector(".nav-links");
+
+    hamburger.addEventListener("click", function () {
+        navLinks.classList.toggle("active");
+        hamburger.classList.toggle("active");
+    });
+
+    document.addEventListener("click", function (event) {
+        if (!hamburger.contains(event.target) && !navLinks.contains(event.target)) {
+            navLinks.classList.remove("active");
+            hamburger.classList.remove("active");
+        }
+    });
