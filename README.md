@@ -28,12 +28,20 @@ Throughout the program, we were given the opportunity to work on real-world proj
 - **Day 4:** Worked on creating, removing, and updating nodes in the DOM, as well as implementing event listeners for user interactions.
 
 ### Week 3: jQuery & DOM Manipulation 
-**Instructors:** Soner Sayın
+**Instructor:** Soner Sayın
 
 - **Day 1**: jQuery Basics (Syntax, Selectors, Events) and XML/JSON  
 - **Day 2**: Manipulating HTML with jQuery - AJAX  
 - **Day 3**: jQuery Animations & Effects, jQuery Plugins & Utilities  
 - **Day 4**: Advanced DOM Manipulation (Traversing, Cloning, Handling Dynamic Elements)
+
+### Week 4: Advanced JS & Web APIs  
+**Instructor:** Emre Babur
+
+- **Day 1:** Explored ES6+ features such as arrow functions, spread/rest operators, and destructuring. Gained an understanding of Web APIs, including Fetch API, and storage mechanisms like `localStorage` and `sessionStorage`.  
+- **Day 2:** Focused on asynchronous JavaScript concepts, including Promises and `async/await`, as well as Web Workers for parallel execution.  
+- **Day 3:** Worked with `MutationObserver` for detecting DOM changes, conducted network performance analysis, and performed accessibility testing.  
+- **Day 4:** Learned how to use browser developer tools for debugging, JavaScript performance profiling, and optimizing web applications.
 
 ## Projects
 
@@ -94,6 +102,25 @@ In this repository, you will find the projects I have worked on during the bootc
    - Implemented a pop-up showing detailed product information on click.  
    - Ensured all functionalities (animations, pop-up, dynamic content) were handled using jQuery.  
 ---
+### Week 4 Projects
+
+1. **Assignment 1:** Fetching and Displaying Users with Local Storage  
+   - Fetched user data from https://jsonplaceholder.typicode.com/users using Fetch API.  
+   - Stored the fetched data in `localStorage` with a 1-day expiration time.  
+   - Displayed user details (name, email, address) dynamically using a generated HTML structure.  
+   - Implemented a delete function to remove users from both the UI and `localStorage`.  
+
+2. **Assignment 2:** User Data Management with Expiry and Session Control  
+   - Defined a configurable `appendLocation` selector for dynamic data insertion.  
+   - Managed `localStorage` expiration time within the same storage key.  
+   - Added a delete function to remove users from both the UI and `localStorage`.  
+   - Used `MutationObserver` to detect empty lists and display a fetch button when all users were deleted.  
+   - Stored a flag in `sessionStorage` to limit the fetch button usage to once per session.  
+
+3. **Assignment 3:** Debugging an E-Commerce Shopping Cart  
+   - Used breakpoints and debugging to debug issues in stock control, price calculation, and discounts.
+---
+
 ## Projects Images
 
 ### Week 1 Projects  
@@ -134,5 +161,15 @@ In this repository, you will find the projects I have worked on during the bootc
 
 4. **Project 1:** Interactive Product Listing with Pop-up Details  
    ![Interactive Product Listing with Pop-up Detail](https://github.com/serdararici/Insider-CodeCraft-Bootcamp/blob/main/Images/Week-3/Week-3_Assignment-4/Week-3_Assignment-4_2.JPG)
+
+### Week 4 Projects
+1. **Assignment 1:** Fetching and Displaying Users with Local Storage  
+    ![Fetching and Displaying Users with Local Storage](https://github.com/serdararici/Insider-CodeCraft-Bootcamp/blob/main/Images/Week-4/Assignment-1/Week-4_Assignment-1.JPG)
+
+2. **Assignment 2:** User Data Management with Expiry and Session Control  
+   ![User Data Management with Expiry and Session Control](https://github.com/serdararici/Insider-CodeCraft-Bootcamp/blob/main/Images/Week-4/Assignment-2/Week-4_Assignment-2_2.JPG)
+
+3. **Assignment 3:** Debugging an E-Commerce Shopping Cart  
+   ![Debugging an E-Commerce Shopping Cart](https://github.com/serdararici/Insider-CodeCraft-Bootcamp/blob/main/Images/Week-4/Assignment-3/Week-4_Assignment-3.JPG)
    
 Feel free to explore the projects and assignments here. This repository serves as a showcase of my learning journey through the Insider CodeCraft Bootcamp.
