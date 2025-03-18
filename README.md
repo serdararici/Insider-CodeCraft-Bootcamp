@@ -3,6 +3,8 @@
 
 This repository contains all the assignments, projects, and learning materials that I’ve worked on as part of my participation in the **Insider & Testinium Tech Hub Bootcamp**, which took place from **15th February to 15th March 2025**. The bootcamp is a comprehensive training program focusing on front-end development, where I gained hands-on experience and enhanced my skills in **HTML**, **CSS**, **JavaScript**, and **responsive design**.
 
+![Certificate](https://github.com/serdararici/Insider-CodeCraft-Bootcamp/blob/main/Certificate/Insider-Certificate.png)
+
 ## About the Bootcamp
 
 The **Insider & Testinium Tech Hub Bootcamp** is designed for university final-year students and recent graduates who are looking to kick-start their careers in web development. During the bootcamp, we covered essential front-end technologies and development practices, with guidance from experienced mentors.
